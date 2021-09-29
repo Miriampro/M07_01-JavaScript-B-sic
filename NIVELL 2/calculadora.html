@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivell 2 - Calculadora</title>
+</head>
+<body>
+
+    <script>
+        ///// FUNCIO CALCULADORA PER A SUMAR, RESTAR, MULTIPLICAR I DIVIDIR /////////
+        
+        function calculadora(operador,valor1, valor2){
+
+            if (operador=="sumar"){
+             resultado = valor1 + valor2;
+             
+            }
+            else if (operador=="restar"){
+             resultado=valor1-valor2;
+      
+            }
+            else if(operador=="multiplicar"){
+             resultado=valor1*valor2;
+
+            }
+            else if(operador=="dividir"){       
+
+              if(valor2==0){
+                  document.write ("Error, no es pot dividir entre zero")
+              }
+              else{
+                  resultado=valor1/valor2;
+
+              }
+            }
+            else{
+                document.write("Error")
+            }
+            return resultado;
+
+        }
+
+        /// DEMANEM A L'USUARI QUE INTRODUEIXI DADES PER PANTALLA I CRIDEM FUNCIO CALCULADORA ///
+
+        var operador=prompt("Quina operació vols fer?: sumar, restar, multiplicar o dividir");
+
+        var valor1=parseInt(prompt("Introdueix un número"));
+
+        var valor2=parseInt(prompt("Introdueix un altre número"));
+
+        if (operador=="sumar"){
+            document.write( "La suma és: " + calculadora (operador, valor1, valor2)+ "</br>");
+             
+        }
+        else if (operador=="restar"){
+            document.write( "La resta és: " + calculadora (operador, valor1, valor2)+ "</br>");
+      
+        }
+        else if(operador=="multiplicar"){
+            document.write( "La multiplicació és: " + calculadora (operador, valor1, valor2)+ "</br>");
+
+        }
+
+        else if(operador=="dividir"){
+    
+            document.write( "La divisió és: " + calculadora (operador, valor1, valor2)+ "</br>");
+
+        }
+        else{
+                document.write("Error, introdueix dades de nou, gràcies!")
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 8</title>
+</head>
+<body>
+
+    <script>
+
+
+
+        function calculadora(operador,valor1, valor2){
+
+            if (operador=="suma"){
+             resultado = valor1 + valor2;
+            }
+            else if (operador=="resta"){
+             resultado=valor1-valor2;
+            }
+            else if(operador=="multiplicacio"){
+             resultado=valor1*valor2;
+            }
+            else{
+                document.write("Error")
+            }
+            return resultado;
+
+        }
+
+        var resultat=calculadora("suma", 40, 20);
+        document.write("suma: " + resultat + "</br>"); 
+
+        resultat=calculadora("resta", 40, 20);
+        document.write("resta: " + resultat + "</br>");
+
+        resultat=calculadora("multiplicacio", 40, 20);
+        document.write("multiplicacio: " + resultat + "</br>");
+        
+
+    
+    </script>
+    
+</body>
+</html>
